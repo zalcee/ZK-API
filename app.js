@@ -7,7 +7,7 @@ app.get("/api/n8n/", async (req, res) => {
     try {
         const response = await axios({
             method: "post",
-            url: "https://n8n.spruce.ph/webhook-test/test", // 🔴 Replace with actual URL
+            url: "https://sample.ph/webhook-test/test", // 🔴 Replace with actual URL
             headers: {
                 "Content-Type": "application/json"
             },
