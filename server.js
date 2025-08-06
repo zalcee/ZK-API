@@ -44,7 +44,7 @@ app.get("/attendance", async (req, res) => {
     // Get filter dates from query
     const { start, end } = req.query;
     const startDate = start ? new Date(start) : null;
-    const endDate = end ? new Date(end) : null;
+    const endDate = end ? new Date(end).setHours(23, 59, 59, 999) : null;
 
     // Filter and enrich logs
     const enrichedLogs = logs.data
